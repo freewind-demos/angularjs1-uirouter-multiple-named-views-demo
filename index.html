@@ -14,10 +14,13 @@
 <div>
     <div>
         Choose:
-        <a ui-sref="pa" ui-sref-active="active">Page A</a>
-        <a ui-sref="pb" ui-sref-active="active">Page B</a>
+        <a ui-sref="user" ui-sref-active="active">User</a>
+        <a ui-sref="admin" ui-sref-active="active">Admin</a>
     </div>
-    <ui-view></ui-view>
+</div>
+<div>
+    <div ui-view="header"></div>
+    <div ui-view="body"></div>
 </div>
 </body>
 </html>

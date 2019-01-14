@@ -1,18 +1,32 @@
 const app = angular.module('app', ['ui.router'])
 
-app.config(['$stateProvider', ($stateProvider) => {
+app.config(($stateProvider, $urlRouterProvider) => {
 
-  $stateProvider.state({
-    name: 'pa',
-    url: '/page-a',
-    templateUrl: './templates/a.html'
+  $stateProvider.state('user', {
+    url: '/user',
+    views: {
+      'header': {
+        templateUrl: './templates/user-header.html'
+      },
+      'body': {
+        templateUrl: './templates/user-body.html'
+      }
+    }
   });
 
-  $stateProvider.state({
-    name: 'pb',
-    url: '/page-b',
-    templateUrl: './templates/b.html'
+  $stateProvider.state('admin', {
+    url: '/admin',
+    views: {
+      'header': {
+        templateUrl: './templates/admin-header.html'
+      },
+      'body': {
+        templateUrl: './templates/admin-body.html'
+      }
+    }
   });
 
-}]);
+  $urlRouterProvider.otherwise('/user')
+
+});
 
