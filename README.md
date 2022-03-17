@@ -5,6 +5,6 @@ AngularJS1 "@uirouter" Multiple Named Views Demo
 
 ```
 npm install
-npm run demo
+npm start
 ```
 
